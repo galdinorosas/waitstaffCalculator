@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
-	</script>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
+		</script>
 
-	<script type="text/javascript" src="js/angular.js"></script>
-</head>
-<body>
-	<header>
-		Waitstaff Calculator
-	</header>
+		<script type="text/javascript" src="js/angular.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<header>
+			Waitstaff Calculator
+		</header>
 
-	<section class="mealSectionContainer">
-		
-		<section class="mealDetails">
-			<h1>
-				Enter the Meal Details:
-			</h1>
-
-			<div class="mealDetailsContents">
-				<p>Base Meal Price: $</p>
-				<input type="number">
-				<p>Tax Rate: %</p>
-				<input type="number">
-				<p>Tip Percentage: %</p>
-				<input type="number">
-				
-			</div>
-
-			<input class="submitButton" type="button" value="SUBMIT">
-			<input class="cancelButton" type="button" value="CANCEL">
-		</section>
-	
-		<section class="customerCharges">
-			<h1>Customer Charges</h1>
-
-			<p>{{}}</p>
-			<p>Subtotal</p>
-			<p>{{}}</p>
-			<p>Tip</p>
+		<section class="mealSectionContainer">
 			
+			<section class="mealDetails">
+				<h1>
+					Enter the Meal Details:
+				</h1>
 
-			<div class="totalContainer">
-				<p>{{}}</p>
-				<p>Total</p>
-			</div>
+				<form name="mealForm" novalidate class="mealDetailsContents">
+					<p>Base Meal Price: $</p>
+					<span class="priceError" ng-if="mealForm.mealPrice.$error.required"> Enter a meal price. </span>
+					<input  ng-model="mealPrice" required="test" name="mealPrice" type="number">
+
+					<p>Tax Rate: %</p>
+					
+					<span class="taxError" ng-if="mealForm.taxRate.$error.required"> Enter a tax rate. </span>
+					<input ng-model="taxRate" required name="taxRate" type="number">
+
+					<p>Tip Percentage: %</p>
+
+					<span class="tipError" ng-if="mealForm.tipPercentage.$error.required"> Enter a tip percentage. </span>
+					<input ng-model="tipPercentage" required name="tipPercentage" type="number">
+					
+				</form>
+
+				<input class="submitButton" ng-click="submit()" type="button" value="SUBMIT">
+				<input class="cancelButton" ng-click="cancel()" type="button" value="CANCEL">
+
+			</section>
+		
+			<section class="customerCharges">
+				<h1>Customer Charges</h1>
+
+				<p>{{subtotal | number: 2}}</p>
+				<p>Subtotal</p>
+				<p>{{tip | number: 2}}</p>
+				<p>Tip</p>
+				
+
+				<div class="totalContainer">
+					<p>{{total | number: 2}}</p>
+					<p>Total</p>
+				</div>
+
+			</section>
+
+			<section class="earningsInfo">
+				<h1>My Earnings Info</h1>
+
+				<p class="earningsText">Tip Total:</p>
+				<p>{{tipTotal | number: 2}}</p>
+				<p class="earningsText">Meal Count:</p>
+				<p>{{mealCount}}</p>
+				<p class="earningsText">Average Tip Per Meal:</p>
+				<p>{{avgTipPerMeal | number: 2}}</p>
+			</section>
+
+			<input class="resetButton" ng-click="reset()" value="RESET" type="button">
+
+
 		</section>
 
-		<section class="earningsInfo">
-			<h1>My Earnings Info</h1>
 
-			<p class="earningsText">Tip Total:</p>
-			<p>{{}}</p>
-			<p class="earningsText">Meal Count:</p>
-			<p>{{}}</p>
-			<p class="earningsText">Average Tip Per Meal:</p>
-			<p>{{}}</p>
-		</section>
-
-		<input class="resetButton" value="RESET" type="button">
-
-
-	</section>
-
-
-	
-	
-</body>
+		
+		
+	</body>
 </html>

@@ -1,0 +1,143 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	width: 100%;
+    height: 2em;
+    background-color: pink;
+    text-align: center;
+    font-size: 4em;
+    line-height: 2em;
+}
+
+.mealSectionContainer{
+	width: 100%;
+	height: 32em;
+	background-color: blue;
+}
+
+.mealDetails{
+	width: 22em;
+    height: 25em;
+    border: 0.4em black solid;
+    float: left;
+    margin: 2em 0em 0em 5em;
+}
+
+.mealDetails h1{
+	width: 100%;
+    height: 2em;
+    border-bottom: 0.1em solid black;
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    line-height: 2em;
+}
+
+.mealDetailsContents{
+	width: 100%;
+	height: 15em;
+	border-bottom: 0.2em solid black;
+}
+
+.mealDetailsContents p{
+	float: left;
+    width: 10em;
+    height: 2em;
+    text-align: right;
+    line-height: 2.5em;
+    margin-right: 2em;
+}
+
+.mealDetailsContents input{
+	float: left;
+    width: 12em;
+    height: 2em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.submitButton, .cancelButton{
+	width: 11em;
+    height: 2.5em;
+    border: 0.2em solid black;
+    margin: 2.5em 0em 0em 3em;
+    cursor: pointer;
+}
+
+.customerCharges, .earningsInfo {
+    width: 20em;
+    height: 11em;
+    border: 0.4em solid black;
+    float: left;
+    margin: 2em 0em 0em 4em;
+}
+
+.customerCharges h1{
+	text-align: center;
+    width: 100%;
+    height: 1.5em;
+    border-bottom: 0.1em solid black;
+    font-size: 2em;
+    margin: 0px;
+    line-height: 1.5em;
+}
+
+.customerCharges p{
+	margin: 0;
+	width: 7em;
+	float: right;
+	height: 2.5em;
+}
+
+.totalContainer{
+	width: 15em;
+	border-top: 0.2em solid black;
+	height: 2em;
+	float: left;
+	margin-left: 2.5em;
+}
+
+.totalContainer p {
+	text-align: center;
+	line-height: 3em;
+}
+
+.earningsInfo h1{
+	margin: 0;
+    height: 1.5em;
+    border-bottom: 0.1em solid black;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 2em;
+}
+
+.earningsInfo p{
+	width: 4em;
+    height: 2em;
+    float: left;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.earningsInfo .earningsText{
+    width: 12em;
+    text-align: right;
+    margin-right: 3em;
+}
+
+.resetButton{
+	width: 11em;
+    height: 2.5em;
+    border: 0.2em solid black;
+    margin: 2.5em 0em 0em 25em;
+    cursor: pointer;
+}

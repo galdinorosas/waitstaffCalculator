@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
+	</script>
+
+	<script type="text/javascript" src="js/angular.js"></script>
+</head>
+<body>
+	<header>
+		Waitstaff Calculator
+	</header>
+
+	<section class="mealSectionContainer">
+		
+		<section class="mealDetails">
+			<h1>
+				Enter the Meal Details:
+			</h1>
+
+			<div class="mealDetailsContents">
+				<p>Base Meal Price: $</p>
+				<input type="number">
+				<p>Tax Rate: %</p>
+				<input type="number">
+				<p>Tip Percentage: %</p>
+				<input type="number">
+				
+			</div>
+
+			<input class="submitButton" type="button" value="SUBMIT">
+			<input class="cancelButton" type="button" value="CANCEL">
+		</section>
+	
+		<section class="customerCharges">
+			<h1>Customer Charges</h1>
+
+			<p>{{}}</p>
+			<p>Subtotal</p>
+			<p>{{}}</p>
+			<p>Tip</p>
+			
+
+			<div class="totalContainer">
+				<p>{{}}</p>
+				<p>Total</p>
+			</div>
+		</section>
+
+		<section class="earningsInfo">
+			<h1>My Earnings Info</h1>
+
+			<p class="earningsText">Tip Total:</p>
+			<p>{{}}</p>
+			<p class="earningsText">Meal Count:</p>
+			<p>{{}}</p>
+			<p class="earningsText">Average Tip Per Meal:</p>
+			<p>{{}}</p>
+		</section>
+
+		<input class="resetButton" value="RESET" type="button">
+
+
+	</section>
+
+
+	
+	
+</body>
+</html>

@@ -1,8 +1,10 @@
+
+
 angular.module('myApp',['ngRoute'])
 	.config(['$routeProvider', function($routeProvider){
 		$routeProvider.when('/',{
 			templateUrl:'home.html',
-			controller: 'homeCtrl'
+			controller: 'myCtrl'
 		})
 		.when('/new-meal',{
 			templateUrl: 'newMeal.html',
@@ -13,10 +15,23 @@ angular.module('myApp',['ngRoute'])
 			templateUrl: 'myEarnings.html',
 			controller: 'myCtrl'
 
-		});
+		})
+		.otherwise('/');;
 
 	}])
-		.controller('myCtrl',[ '$scope',function($scope){
+		.controller('myCtrl',[ '$scope','$rootScope',function($scope,$rootScope){
+
+			// $rootScope.meal={
+			// 	mealPrice : 0,
+			// 	taxRate : 0,
+			// 	tipPercentage : 0,
+			// 	subtotal : 0,
+			// 	tip : 0,
+			// 	total : 0,
+			// 	tipTotal : 0,
+			// 	mealCount : 0,
+			// 	avgTipPerMeal : 0,
+			// };
 
 			$scope.mealPrice = 0;
 			$scope.taxRate = 0;

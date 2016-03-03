@@ -11,6 +11,27 @@ header{
     line-height: 2em;
 }
 
+.linksContainer{
+    width: 50em;
+    height: 3em;
+    margin: 0 auto;
+}
+
+.linksList{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.linksList li{
+    display: inline-block;
+    padding: 0em 0em 0em 9em;
+}
+
+li a{
+    text-decoration: none;
+}
+
 .mealSectionContainer{
 	width: 100%;
 	height: 32em;
